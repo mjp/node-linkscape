@@ -6,6 +6,8 @@ APIs.
 
 ## Installation
 
+Coming soon.
+
 ## Usage
 
     var Linkscape = require('linkscape').Linkscape;
@@ -18,7 +20,7 @@ APIs.
         }
 
         console.log(res);
-    }
+    });
 
 ## Methods Available
 
