@@ -40,6 +40,7 @@ result will be an object containing the response from seoMOZ.
 
     seomoz.links(url, scope, options, callback)
 
+* `url` The URL you want to get links for, ex: `www.google.com`
 * `scope` The scope of the results as per the seoMOZ API docs, ex: `page_to_page`
 * `options` An object with any of the following:
 
@@ -55,6 +56,7 @@ result will be an object containing the response from seoMOZ.
 
     seomoz.anchorText(url, scope, cols, callback)
 
+* `url` The URL you want to get anchor texts for, ex: `www.google.com`
 * `scope` Scope of the link as per the seoMOZ API docs, ex: `phrase_to_page`
 * `cols` Which columns are returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
 * `callback` Same as urlMetrics.
