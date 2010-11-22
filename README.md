@@ -44,3 +44,13 @@ result will be an object containing the response from seoMOZ.
 
     seomoz.anchorText(url, scope, cols, callback)
 
+* `scope` The scope of the results as per the seoMOZ API docs, ex: `page_to_page`
+* `options` An object with any of the following:
+
+    * `sort`
+    * `filter`
+    * `targetCols`
+    * `sourceCols`
+    * `linkCols`
+
+* `callback` Same as urlMetrics.
