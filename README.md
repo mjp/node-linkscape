@@ -40,17 +40,22 @@ result will be an object containing the response from seoMOZ.
 
     seomoz.links(url, scope, options, callback)
 
+* `scope` The scope of the results as per the seoMOZ API docs, ex: `page_to_page`
+* `options` An object with any of the following:
+
+    * `sort` As per the seoMOZ API docs, ex: `page_authority`
+    * `filter` An array of strings, ex: `['internal', external', 'nofollow']`
+    * `targetCols` Columns for the target of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `sourceCols` Columns for the source of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `linkCols` Columns for the link itself, see `Linkscape.LINK_FLAGS`
+
+* `callback` Same as urlMetrics.
+
 ###anchorText
 
     seomoz.anchorText(url, scope, cols, callback)
 
-* `scope` The scope of the results as per the seoMOZ API docs, ex: `page_to_page`
-* `options` An object with any of the following:
-
-    * `sort`
-    * `filter`
-    * `targetCols`
-    * `sourceCols`
-    * `linkCols`
-
+* `scope` Scope of the link as per the seoMOZ API docs, ex: `phrase_to_page`
+* `cols` Which columns are returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
 * `callback` Same as urlMetrics.
+
