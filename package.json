@@ -1,0 +1,12 @@
+{
+  "name": "linkscape",
+  "description": "A node.js client for the seoMOZ Linkscape API",
+  "version": "0.1.0",
+  "author": "Michael Peterson",
+  "main": "lib/linkscape.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mjp/node-linkscape.git"
+  },
+  "engines": { "node": ">= 0.2.0" }
+}
