@@ -6,14 +6,14 @@ APIs.
 
 ## Installation
 
-Coming soon.
+    npm install linkscape
 
 ## Usage
 
     var Linkscape = require('linkscape').Linkscape;
 
     var seomoz = new Linkscape('your-access-id', 'your-secret');
-    seomoz.urlMetrics('www.google.com', {}, function(err, res) {
+    seomoz.urlMetrics('www.google.com', [], function(err, res) {
         if (err) {
             console.log(err);
             return;
@@ -24,4 +24,11 @@ Coming soon.
 
 ## Methods Available
 
-Coming soon.
+###urlMetrics
+
+    seomoz.urlMetrics(url, cols, callback)
+
+* `url` The URL you want metrics for, ex: `'www.google.com'`
+* `cols` An array of strings for the columns you want in the
+response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
+
