@@ -13,7 +13,7 @@ APIs.
     var Linkscape = require('linkscape').Linkscape;
 
     var seomoz = new Linkscape('your-access-id', 'your-secret');
-    seomoz.urlMetrics('www.google.com', [], function(err, res) {
+    seomoz.urlMetrics('www.google.com', ['url', 'links'], function(err, res) {
         if (err) {
             console.log(err);
             return;
@@ -46,9 +46,9 @@ result will be an object containing the response from seoMOZ.
 
     * `sort` As per the seoMOZ API docs, ex: `page_authority`
     * `filter` An array of strings, ex: `['internal', external', 'nofollow']`
-    * `targetCols` Columns for the target of the link, see `Linkscape.URL_METRICS_FLAGS`
-    * `sourceCols` Columns for the source of the link, see `Linkscape.URL_METRICS_FLAGS`
-    * `linkCols` Columns for the link itself, see `Linkscape.LINK_FLAGS`
+    * `targetCols` Array of strings for the columns returned for the target of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `sourceCols` Array of strings for the columns returned for the source of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `linkCols` Array of strings for the columns for the link itself, see `Linkscape.LINK_FLAGS`
 
 * `callback` Same as urlMetrics.
 
@@ -58,6 +58,6 @@ result will be an object containing the response from seoMOZ.
 
 * `url` The URL you want to get anchor texts for, ex: `www.google.com`
 * `scope` Scope of the link as per the seoMOZ API docs, ex: `phrase_to_page`
-* `cols` Which columns are returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
+* `cols` Array of strings for the columns returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
 * `callback` Same as urlMetrics.
 
