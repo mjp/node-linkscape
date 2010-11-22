@@ -1,10 +1,12 @@
 # SeoMOZ Linkscape API Library
 
 Node-linkscape is a node.js module for asynchronously communicating with the
-seoMOZ linkscape APIs. It supports the url-metrics, links, and anchor-text
-APIs.
+[seoMOZ linkscape APIs](http://www.seomoz.org/api). It supports the url-metrics, 
+links, and anchor-text APIs.
 
 ## Installation
+
+Use [npm](http://npmjs.org/) to install node-linkscape
 
     npm install linkscape
 
