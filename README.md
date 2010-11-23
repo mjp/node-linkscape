@@ -63,3 +63,17 @@ result will be an object containing the response from seoMOZ.
 * `cols` Array of strings for the columns returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
 * `callback` Same as urlMetrics.
 
+###topPages
+
+    seomoz.topPages(url, cols, options, callback)
+
+* `url` The subdomain you want results for
+* `cols` An array of strings for the columns you want in the
+response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']
+* `options` An object with any of the following:
+
+    * `offset` Return starting at the nth result
+    * `limit` How many results to return (max 1000)
+
+* `callback` Same as urlMetrics
+
