@@ -2,7 +2,7 @@
 
 Node-linkscape is a node.js module for asynchronously communicating with the
 [seoMOZ linkscape APIs](http://www.seomoz.org/api). It supports the url-metrics, 
-links, and anchor-text APIs.
+links, anchor-text, and top-pages APIs.
 
 ## Installation
 
@@ -69,7 +69,7 @@ result will be an object containing the response from seoMOZ.
 
 * `url` The subdomain you want results for
 * `cols` An array of strings for the columns you want in the
-response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']
+response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
 * `options` An object with any of the following:
 
     * `offset` Return starting at the nth result
