@@ -1,7 +1,7 @@
 {
   "name": "linkscape",
   "description": "A node.js client for the seoMOZ Linkscape API",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Michael Peterson",
   "main": "lib/linkscape.js",
   "repository": {
