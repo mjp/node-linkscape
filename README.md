@@ -18,7 +18,7 @@ Use [npm](http://npmjs.org/) to install node-mozscape
     npm install mozscape
 
 ## Dependencies
-    [request](https://www.npmjs.org/package/request)
+[request](https://www.npmjs.org/package/request)
 
 ## Usage
 
