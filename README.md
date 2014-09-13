@@ -1,7 +1,5 @@
 # SeoMOZ Mozscape API Library
 
-##This is UNFINISHED and will not yet work!!!
-
 Node-mozscape is a node.js module for asynchronously communicating with the
 [MOZ Mozscape APIs](http://moz.com/products/api). It supports the url-metrics, 
 links, anchor-text, and top-pages APIs.
