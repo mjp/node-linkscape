@@ -9,7 +9,7 @@ Node-mozscape is a node.js module for asynchronously communicating with the
 - anchor-text
 - top-pages
 
-This is reworked from a previous api library - [Linkscape API Library](https://github.com/mjp/node-linkscape)
+This is reworked the from the tremendous previous api library - [Linkscape API Library](https://github.com/mjp/node-linkscape)
 
 ## Installation
 
@@ -42,7 +42,7 @@ Use [npm](http://npmjs.org/) to install node-mozscape
 
 * `url` The URL you want metrics for, ex: `'www.google.com'`
 * `cols` An array of strings for the columns you want in the
-response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
+response (see `Mozscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
 * `callback` A function to be called asynchronously once the response comes
 back from the API. The function should accept 2 arguments in the following
 order: `error, result` where error will either be an object or null, and
@@ -58,8 +58,8 @@ result will be an object containing the response from seoMOZ.
 
     * `sort` As per the seoMOZ API docs, ex: `page_authority`
     * `filter` An array of strings, ex: `['internal', external', 'nofollow']`
-    * `targetCols` Array of strings for the columns returned for the target of the link, see `Linkscape.URL_METRICS_FLAGS`
-    * `sourceCols` Array of strings for the columns returned for the source of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `targetCols` Array of strings for the columns returned for the target of the link, see `Mozscape.URL_METRICS_FLAGS`
+    * `sourceCols` Array of strings for the columns returned for the source of the link, see `Mozscape.URL_METRICS_FLAGS`
     * `linkCols` Array of strings for the columns for the link itself, see `Linkscape.LINK_FLAGS`
 
 * `callback` Same as urlMetrics.
