@@ -1,7 +1,7 @@
 {
   "name": "mozscape",
   "description": "A node.js client for the Mozscape API",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "author": "Scott Wyatt",
   "main": "lib/mozscape.js",
   "repository": {
