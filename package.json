@@ -8,5 +8,5 @@
     "type": "git",
     "url": "http://github.com/scott-wyatt/node-mozscape.git"
   },
-  "engines": { "node": ">= 0.2.0" }
+  "engines": { "node": ">= 0.8.0" }
 }
