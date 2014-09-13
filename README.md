@@ -1,8 +1,14 @@
 # SeoMOZ Mozscape API Library
 
 Node-mozscape is a node.js module for asynchronously communicating with the
-[MOZ Mozscape APIs](http://moz.com/products/api). It supports the url-metrics, 
-links, anchor-text, and top-pages APIs.
+[MOZ Mozscape APIs](http://moz.com/products/api). 
+
+APIs It supports
+*url-metrics 
+*links 
+*anchor-text
+*top-pages
+
 This is reworked from a previous api library - [Linkscape API Library](https://github.com/mjp/node-linkscape)
 
 ## Installation
@@ -11,9 +17,12 @@ Use [npm](http://npmjs.org/) to install node-mozscape
 
     npm install mozscape
 
+## Dependencies
+    [request](https://www.npmjs.org/package/request)
+
 ## Usage
 
-    var Linkscape = require('mozscape').Mozscape;
+    var Mozscape = require('mozscape').Mozscape;
 
     var seomoz = new Mozscape('your-access-id', 'your-secret');
     seomoz.urlMetrics('www.google.com', ['url', 'links'], function(err, res) {
