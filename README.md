@@ -3,11 +3,11 @@
 Node-mozscape is a node.js module for asynchronously communicating with the
 [MOZ Mozscape APIs](http://moz.com/products/api). 
 
-APIs It supports
-*url-metrics 
-*links 
-*anchor-text
-*top-pages
+## APIs It supports
+- url-metrics 
+- links 
+- anchor-text
+- top-pages
 
 This is reworked from a previous api library - [Linkscape API Library](https://github.com/mjp/node-linkscape)
 
