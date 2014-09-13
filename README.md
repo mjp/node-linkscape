@@ -1,6 +1,6 @@
 # SeoMOZ Mozscape API Library
 
-##THIS IS UNFINISHED!!!
+##This is UNFINISHED and will not yet work!!!
 
 Node-mozscape is a node.js module for asynchronously communicating with the
 [seoMOZ Mozscape APIs](http://www.seomoz.org/api). It supports the url-metrics, 
@@ -9,15 +9,15 @@ This is reworked from a previous api library - [Linkscape API Library](https://g
 
 ## Installation
 
-Use [npm](http://npmjs.org/) to install node-linkscape
+Use [npm](http://npmjs.org/) to install node-mozscape
 
-    npm install linkscape
+    npm install mozscape
 
 ## Usage
 
-    var Linkscape = require('linkscape').Linkscape;
+    var Linkscape = require('mozscape').Mozscape;
 
-    var seomoz = new Linkscape('your-access-id', 'your-secret');
+    var seomoz = new Mozscape('your-access-id', 'your-secret');
     seomoz.urlMetrics('www.google.com', ['url', 'links'], function(err, res) {
         if (err) {
             console.log(err);
