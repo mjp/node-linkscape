@@ -12,6 +12,7 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "crypto": "0.0.3",
     "request": "^2.42.0"
   }
 }
