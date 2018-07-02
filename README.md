@@ -1,11 +1,11 @@
 # MOZ Mozscape API Library
 
 Node-mozscape is a node.js module for asynchronously communicating with the
-[MOZ Mozscape APIs](http://moz.com/products/api). 
+[MOZ Mozscape APIs](http://moz.com/products/api).
 
 ## APIs It supports
-- url-metrics 
-- links 
+- url-metrics
+- links
 - anchor-text
 - top-pages
 - metadata
@@ -62,6 +62,7 @@ result will be an object containing the response from seoMOZ.
     * `targetCols` Array of strings for the columns returned for the target of the link, see `Mozscape.URL_METRICS_FLAGS`
     * `sourceCols` Array of strings for the columns returned for the source of the link, see `Mozscape.URL_METRICS_FLAGS`
     * `linkCols` Array of strings for the columns for the link itself, see `Linkscape.LINK_FLAGS`
+    * `sourceDomain` String of a domain, ex `google.com`. Excludes results unless they originate from the root domain you specify.
 
 * `callback` Same as urlMetrics.
 
@@ -94,9 +95,9 @@ response (see `Mozscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
 
 * `option` A string of any of the following:
 
-    * `last_update` 
+    * `last_update`
     * `next_update`
-    * `index_stats` 
+    * `index_stats`
 
 * `callback` Same as urlMetrics
 
