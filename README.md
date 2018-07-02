@@ -1,21 +1,32 @@
-# SeoMOZ Linkscape API Library
+# MOZ Mozscape API Library
 
-Node-linkscape is a node.js module for asynchronously communicating with the
-[seoMOZ linkscape APIs](http://www.seomoz.org/api). It supports the url-metrics, 
-links, anchor-text, and top-pages APIs.
+Node-mozscape is a node.js module for asynchronously communicating with the
+[MOZ Mozscape APIs](http://moz.com/products/api).
+
+## APIs It supports
+- url-metrics
+- links
+- anchor-text
+- top-pages
+- metadata
+
+This is reworked the from the tremendous previous api library - [Linkscape API Library](https://github.com/mjp/node-linkscape)
 
 ## Installation
 
-Use [npm](http://npmjs.org/) to install node-linkscape
+Use [npm](http://npmjs.org/) to install node-mozscape
 
-    npm install linkscape
+    npm install mozscape
+
+## Dependencies
+[request](https://www.npmjs.org/package/request)
 
 ## Usage
 
-    var Linkscape = require('linkscape').Linkscape;
+    var Mozscape = require('mozscape').Mozscape;
 
-    var seomoz = new Linkscape('your-access-id', 'your-secret');
-    seomoz.urlMetrics('www.google.com', ['url', 'links'], function(err, res) {
+    var moz = new Mozscape('your-access-id', 'your-secret');
+    moz.urlMetrics('www.google.com', ['url', 'links'], function(err, res) {
         if (err) {
             console.log(err);
             return;
@@ -28,11 +39,11 @@ Use [npm](http://npmjs.org/) to install node-linkscape
 
 ###urlMetrics
 
-    seomoz.urlMetrics(url, cols, callback)
+    moz.urlMetrics(url, cols, callback)
 
 * `url` The URL you want metrics for, ex: `'www.google.com'`
 * `cols` An array of strings for the columns you want in the
-response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
+response (see `Mozscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
 * `callback` A function to be called asynchronously once the response comes
 back from the API. The function should accept 2 arguments in the following
 order: `error, result` where error will either be an object or null, and
@@ -40,7 +51,7 @@ result will be an object containing the response from seoMOZ.
 
 ###links
 
-    seomoz.links(url, scope, options, callback)
+    moz.links(url, scope, options, callback)
 
 * `url` The URL you want to get links for, ex: `www.google.com`
 * `scope` The scope of the results as per the seoMOZ API docs, ex: `page_to_page`
@@ -48,32 +59,45 @@ result will be an object containing the response from seoMOZ.
 
     * `sort` As per the seoMOZ API docs, ex: `page_authority`
     * `filter` An array of strings, ex: `['internal', external', 'nofollow']`
-    * `targetCols` Array of strings for the columns returned for the target of the link, see `Linkscape.URL_METRICS_FLAGS`
-    * `sourceCols` Array of strings for the columns returned for the source of the link, see `Linkscape.URL_METRICS_FLAGS`
+    * `targetCols` Array of strings for the columns returned for the target of the link, see `Mozscape.URL_METRICS_FLAGS`
+    * `sourceCols` Array of strings for the columns returned for the source of the link, see `Mozscape.URL_METRICS_FLAGS`
     * `linkCols` Array of strings for the columns for the link itself, see `Linkscape.LINK_FLAGS`
+    * `sourceDomain` String of a domain, ex `google.com`. Excludes results unless they originate from the root domain you specify.
 
 * `callback` Same as urlMetrics.
 
 ###anchorText
 
-    seomoz.anchorText(url, scope, cols, callback)
+    moz.anchorText(url, scope, cols, callback)
 
 * `url` The URL you want to get anchor texts for, ex: `www.google.com`
-* `scope` Scope of the link as per the seoMOZ API docs, ex: `phrase_to_page`
-* `cols` Array of strings for the columns returned, see `Linkscape.ANCHOR_TEXT_FLAGS`
+* `scope` Scope of the link as per the MOZ API docs, ex: `phrase_to_page`
+* `cols` Array of strings for the columns returned, see `Mozscape.ANCHOR_TEXT_FLAGS`
 * `callback` Same as urlMetrics.
 
 ###topPages
 
-    seomoz.topPages(url, cols, options, callback)
+    moz.topPages(url, cols, options, callback)
 
 * `url` The subdomain you want results for
 * `cols` An array of strings for the columns you want in the
-response (see `Linkscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
+response (see `Mozscape.URL_METRICS_FLAGS`). Ex: `['title', 'url', 'links']`
 * `options` An object with any of the following:
 
     * `offset` Return starting at the nth result
     * `limit` How many results to return (max 1000)
+
+* `callback` Same as urlMetrics
+
+###metadata
+
+    moz.metadata(option, callback)
+
+* `option` A string of any of the following:
+
+    * `last_update`
+    * `next_update`
+    * `index_stats`
 
 * `callback` Same as urlMetrics
 
